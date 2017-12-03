@@ -1,0 +1,76 @@
+<div class="crumb-wrap">
+    <div class="crumb-list"><i class="icon-font"></i><a href="/admin/index/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/admin/media/index">素材管理</a><span class="crumb-step">&gt;</span><span>创建永久图文信息</span></div>
+</div>
+<div class="result-wrap">
+    <div class="result-content">
+        <div class="result-content">
+            <table class="result-tab" width="100%">
+                <tr>
+                    <th>可以使用的thumb_media_id</th>
+                </tr>
+                {volist name='media' id='vo'}
+                <tr>
+                    <td>
+                        {$vo.media_id}
+                    </td>
+                </tr>
+                {/volist}
+            </table>
+            <div align="center">{$media->render()}</div>
+        </div>
+        <form action="/admin/media/save2" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            <table class="insert-tab" width="100%">
+                <tbody><tr>
+                    <th><i class="require-red">*</i>标题名称：</th>
+                    <td>
+                        <input class="common-text required" id="thumb" name="title" size="50" value="" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th><i class="require-red">*</i>封面图文素材id：</th>
+                    <td>
+                        <input class="common-text required" id="sorder" name="thumb_media_id" size="50" value="" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th><i class="require-red">*</i>作者：</th>
+                    <td>
+                        <input class="common-text required" id="sorder2" name="author" size="50" value="" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th><i class="require-red">*</i>摘要：</th>
+                    <td>
+                        <input class="common-text required" id="sorder3" name="digest" size="50" value="" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th><i class="require-red">*</i>是否显示封面(默认为1)：</th>
+                    <td>
+                        <input class="common-text required" id="sorder3" name="show_cover_pic" size="50" value="" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th><i class="require-red">*</i>内容：</th>
+                    <td>
+                        <textarea class="common-text required" name="content"></textarea>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th><i class="require-red">*</i>URL：</th>
+                    <td>
+                        <input class="common-text required" id="sorder3" name="content_source_url" size="50" value="" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                        <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                    </td>
+                </tr>
+                </tbody></table>
+        </form>
+    </div>
+</div>

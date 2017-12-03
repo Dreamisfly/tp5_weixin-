@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__CSS__/style.css" type="text/css" media="all">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <title>后台</title>
+</head>
+<body>
+<h1>后台添加管理员</h1>
+
+<div class="container w3layouts agileits">
+
+    <div class="login w3layouts agileits">
+        <h2>添加管理员</h2>
+        <form action="/admin/adminuser/doregister" method="post">
+            <input type="text" name="username" placeholder="用户名" required="">
+            <input type="password" name="password" placeholder="密码" required="">
+        <ul class="tick w3layouts agileits">
+
+                <input type="text" name="captcha" placeholder="验证码" >
+
+
+        </ul>
+            <img src="{:captcha_src('register')}" onclick=changecaptcha(this)>
+        <div class="send-button w3layouts agileits">
+                <input type="submit" value="注册">
+
+        </div>
+        </form>
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="clear"></div>
+
+</div>
+<script>
+    function changecaptcha(obj) {
+        //单击以后修改图片的src属性
+        $(obj).attr('src',"{:captcha_src('register')}?"+Math.random());
+    }
+</script>
+</body>
+</html>

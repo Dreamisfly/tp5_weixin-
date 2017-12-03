@@ -1,0 +1,31 @@
+<div class="crumb-wrap">
+    <div class="crumb-list"><i class="icon-font"></i><a href="/admin/index/index">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="/admin/category/index">分类管理</a><span class="crumb-step">&gt;</span><span>创建新分类</span></div>
+</div>
+<div class="result-wrap">
+    <div class="result-content">
+        <form action="/admin/category/save" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            <table class="insert-tab" width="100%">
+                <tbody>
+                <tr>
+                    <th><i class="require-red">*</i>分类名称：</th>
+                    <td>
+                        <input type="text" id="exampleInputFile" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <th><i class="require-red">*</i>path：</th>
+                    <td>
+                        <input type="test" id="exampleInputFile" name="path">
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <input class="btn btn-primary btn6 mr10" value="添加" type="submit">
+                        <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                    </td>
+                </tr>
+                </tbody></table>
+        </form>
+    </div>
+</div>
